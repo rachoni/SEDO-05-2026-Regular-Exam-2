@@ -20,10 +20,10 @@ jobs:
         dotnet-version: '6.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore Homies.sln
 
     - name: Build application
-      run: dotnet build --no-restore --configuration Release
+      run: dotnet build Homies.sln --no-restore --configuration Release
 
     - name: Execute automated tests
-      run: dotnet test --no-build --configuration Release
+      run: dotnet test Homies.sln --no-build --configuration Release
